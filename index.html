@@ -6,42 +6,8 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <style>
-        *{
-            box-sizing: border-box;
-            padding:0;
-            margin:0;
-            font-family: monospace;
-        }
-        html{
-            font-size:50px;
-            background:#32383E;
-
-        }
-        main{
-            background:#32383E;
-            height:100vh;
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        *{
-            color:rgb(206, 147, 19);
-        }      
-        #name{
-            font-weight:800;
-        }
-        #time{
-            font-size:3rem;
-        }
-        .show-area p:nth-of-type(2){
-            padding:50px;
-        }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
     <!-- place navbar here -->
@@ -64,22 +30,7 @@
     <!-- place footer here -->
   </footer>
 
-  <script>
-    document.querySelector(".show-area").style.display="none";
-    var name = prompt("Adınız ?","Ebubekir Sıddık Bebek");
-    document.getElementById("name").innerHTML=name;
-
-    var gunler = ["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
-
-    setInterval(() => {
-        let date = new Date();
-        let gun =window.gunler[parseInt(date.getDay())];
-        let date_text=date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+" "+gun;
-        document.querySelector("#time").innerHTML=date_text;
-        document.querySelector(".show-area").style.display="block";
-
-    }, 1000);
-  </script>
+  <script src="main.js"></script>
 </body>
 
 </html>
