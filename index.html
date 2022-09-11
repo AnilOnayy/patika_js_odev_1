@@ -68,22 +68,19 @@
   </script>
   <script>
     document.querySelector(".show-area").style.display="none";
-    let name = prompt("Adınız ?","Ebubekir Sıddık Bebek");
+    var name = prompt("Adınız ?","Ebubekir Sıddık Bebek");
     document.getElementById("name").innerHTML=name;
 
-    let gunler = ["pazar","pazartesi","salı","çarşamba","perşembe","cuma","cumartesi"];
+    var gunler = ["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
+
     setInterval(() => {
         let date = new Date();
-        let date_text="";
-        date_text=date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+        let gun =window.gunler[parseInt(date.getDay())];
+        let date_text=date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+" "+gun;
         document.querySelector("#time").innerHTML=date_text;
+        document.querySelector(".show-area").style.display="block";
+
     }, 1000);
-
-
-
-    
-    document.querySelector(".show-area").style.display="block";
-
   </script>
 </body>
 
